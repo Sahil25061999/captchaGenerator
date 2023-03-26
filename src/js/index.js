@@ -21,8 +21,8 @@ switchMode.addEventListener('click', () => {
 /* CHECK FOR CORRECT CAPTCHA ON FORM SUBMIT */
 
 const toggleMsg = (msg, visibility = 'visible') => {
-  feedbackMsg.style.visibility = 'visible';
-  feedbackMsg.innerHTML = 'enter valid username & password';
+  feedbackMsg.style.visibility = visibility;
+  feedbackMsg.innerHTML = msg;
 };
 
 signupBtn.addEventListener('click', (e) => {
