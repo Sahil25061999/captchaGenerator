@@ -1,0 +1,198 @@
+@import './reset.css';
+@import './globals.css';
+
+main {
+  padding-block: 2rem;
+  width: min(100% - 40px, 1400rem);
+  min-height: 100vh;
+  margin-inline: auto;
+}
+
+/* LABEL AND INPUT STYLES */
+
+label,
+p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: rgb(65, 64, 64);
+  margin-bottom: 0.5rem;
+}
+
+.dark label,
+.dark p {
+  color: rgb(207, 207, 207);
+}
+
+.dark input {
+  background-color: rgb(35, 32, 32);
+  color: white;
+}
+
+input:focus,
+input:hover {
+  transition: 0.1s;
+  box-shadow: inset 2px 2px var(--shadow-color);
+}
+
+/* LABEL INPUT STYLE END*/
+
+/*   DARK MODE BUTTON      */
+
+.switch__btn__container {
+  justify-content: end;
+  align-items: center;
+}
+
+.switch__btn {
+  width: 5rem;
+  padding: 1rem;
+  font-size: 2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.switch__btn > span {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.switch__btn > span > span {
+  display: block;
+}
+
+.switch__btn__text {
+  position: absolute;
+  left: 17%;
+  top: 100%;
+}
+
+.switch__btn > span > span {
+  transform: translateY(0);
+  transition: 0.2s ease-in-out;
+}
+
+.switch__btn .translateY {
+  transform: translateY(-100%);
+}
+
+/* DARK MODE BUTTON END */
+
+/*     FORM STYLE               */
+
+.form__container h1 {
+  margin-block: 1.5rem;
+}
+
+.form__container,
+.input__container,
+.captcha__input {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup__form {
+  width: min(100%, 40rem);
+  border: var(--border);
+  border-radius: 3rem;
+  padding: 5rem;
+  box-shadow: 5px 5px var(--shadow-color);
+}
+
+.dark .signup__form {
+  box-shadow: 4px 4px var(--shadow-color);
+}
+
+.input__container {
+  margin-block: 1.5rem;
+  align-items: start;
+}
+
+.input__container:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+.captcha__container > div {
+  display: flex;
+  width: 100%;
+}
+
+.captcha__btn,
+.signup__btn {
+  margin-block: 1rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 4px 6px var(--secondary-color);
+}
+
+.captcha__btn:active,
+.signup__btn:active {
+  transition-duration: 0s;
+  transform: translateY(4px);
+  box-shadow: 3px 2px var(--secondary-color);
+}
+
+input,
+.captcha__generator__container {
+  width: 100%;
+  padding: 1rem;
+  border: var(--border);
+  border-radius: 1.5rem;
+}
+
+.captcha__generator__container {
+  position: relative;
+  overflow: hidden;
+  flex: 2;
+}
+
+.captcha__text {
+  width: 100%;
+  color: black;
+  justify-content: space-between;
+}
+
+.captcha__img {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.captcha__btn {
+  flex: 0.5;
+  margin-block: 0;
+  margin-left: 5px;
+}
+
+/* FORM STYLE END*/
+
+/*  MSG STYLE        */
+
+.msg {
+  visibility: hidden;
+  margin-block: 0.5rem;
+  font-weight: bold;
+}
+
+.dark .error {
+  color: hsl(0, 49%, 51%);
+}
+
+.error {
+  color: hsl(0, 100%, 50%);
+}
+
+.success {
+  color: rgb(0, 120, 0);
+}
+
+.dark .success {
+  color: rgb(79, 195, 79);
+}
+
+/*MSG STYLE END*/

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---Facebook-->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="Captcha Generation for signup" />
+    <meta
+      property="og:description"
+      content="Generates random captcha, verify captcha before sign up"
+    />
+    <meta property="og:image" content="./assets/ss.png" />
+    <!-------Twitter-->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="" />
+    <meta property="twitter:title" content="Captcha Generation for signup" />
+    <meta
+      property="twitter:description"
+      content="Generates random captcha, verify captcha before sign up"
+    />
+    <meta property="twitter:image" content="./assets/ss.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./js/index.js" defer></script>
+    <title>Captcha Generator</title>
+  </head>
+  <body class="">
+    <main>
+      <!---------DARK MODE BUTTON----------->
+      <div class="switch__btn__container d-flex">
+        <h5>switch to</h5>
+        <button class="switch__btn">
+          <span>
+            <span
+              ><span class="fa-solid fa-moon"></span
+              ><span class="switch__btn__text"
+                ><span class="fa-solid fa-sun"></span> </span
+            ></span>
+          </span>
+        </button>
+      </div>
+      <!--MAIN SIGNUP FORM -->
+      <div class="form__container d-flex">
+        <h1 class="form__title">Signup</h1>
+        <span class="msg">MSg</span>
+        <form class="signup__form">
+          <div class="input__container username__container d-flex">
+            <label for="username">username</label>
+            <input type="username" name="username" id="username" required />
+          </div>
+          <div class="input__container password__container d-flex">
+            <label for="password">password</label>
+            <input type="password" name="password" id="password" required />
+          </div>
+          <div class="input__container captcha__container d-flex">
+            <p>Captcha</p>
+            <div>
+              <div class="captcha__generator__container">
+                <div class="captcha__text d-flex"></div>
+                <img class="captcha__img" src="./assets/texture.jpg" alt="" />
+              </div>
+
+              <button class="captcha__btn btn">
+                <span class="fa-solid fa-arrows-rotate"></span>
+              </button>
+            </div>
+          </div>
+          <div class="input__container captcha__input__container d-flex">
+            <label class="captcha__label" for="captcha">enter captcha </label>
+            <input type="text" name="captcha" id="captcha" required />
+          </div>
+          <button class="signup__btn btn">signup</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

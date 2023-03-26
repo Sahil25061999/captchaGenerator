@@ -1,0 +1,30 @@
+:root {
+  --bgcolor: hsl(0, 0%, 100%);
+  --font-color: hsl(0, 0%, 0%);
+  --border: 2px solid rgb(43, 43, 43);
+  --primary-color: hsl(255, 66%, 48%);
+  --secondary-color: hsl(255, 50%, 30%);
+  --shadow-color: hsl(0, 0%, 0%);
+}
+
+.dark {
+  --bgcolor: hsl(0, 3%, 17%);
+  --font-color: hsl(0, 0%, 100%);
+  --border: 2px solid rgb(0, 0, 0);
+  --primary-color: hsl(255, 66%, 48%);
+  --secondary-color: hsl(254, 92%, 15%);
+}
+
+.d-flex {
+  display: flex;
+}
+
+button {
+  border-radius: 1rem;
+  font-weight: bold;
+  /* transition: 0.2s ease-in-out; */
+}
+
+button:hover {
+  border-radius: 2rem;
+}
