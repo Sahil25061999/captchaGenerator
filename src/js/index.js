@@ -30,7 +30,7 @@ signupBtn.addEventListener('click', (e) => {
   let username = document.querySelector('#username');
   let password = document.querySelector('#password');
   let tempCaptcha = captchaInput.value.split(' ').join(''); //remove spaces from user input.
-  if (!username.value.length && !password.value.length) {
+  if (!username.value.length || !password.value.length) {
     toggleMsg('enter valid username & password'); //display error
     feedbackMsg.classList.add('error');
     feedbackMsg.classList.remove('success');
